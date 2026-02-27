@@ -6,7 +6,7 @@ import { initUiModules } from './components/menu.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const response = await fetch('./data/data.json');
+    const response = await fetch('data/data.json');
     if (!response.ok) throw new Error('Ошибка загрузки JSON');
     const data = await response.json();
 
@@ -54,4 +54,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch (e) {
     console.error('Ошибка:', e);
   }
+
 });
